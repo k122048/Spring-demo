@@ -9,12 +9,15 @@ public class SwimJavaConfigDemoApp {
 		// TODO Auto-generated method stub
 
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class);
-		Coach theCoach = context.getBean("swimCoach",Coach.class);
+		SwimCoach theCoach = context.getBean("swimCoach",SwimCoach.class);
 		
 		System.out.println(theCoach.getDailyWorkOut());
 		
 		System.out.println(theCoach.getDailyFortune());
 		
+		System.out.println("email: "+theCoach.getEmail());
+		
+		System.out.println("email: "+theCoach.getTeam());
 		context.close();
 		
 	}
